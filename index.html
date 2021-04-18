@@ -1,53 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
-    
-    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-      
-   &ndash; Text to speech system for low resource languages by cross-lingual transfer learning and data augmentation
-
-    </title>
-    
-    
-    <meta name="description" property="og:description" content="Text to speech system for low resource languages by cross-lingual transfer learning and data augmentation|">
-    
-
-    <meta name="apple-mobile-web-app-title" content="Text to speech system for low resource languages by cross-lingual transfer learning and data augmentation">
-    
-    
   </head>
-
-
-  <body class="bg-gray">
-    <div id="holy" class="container-lg bg-white h-100">
-
-
-
-      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
-        
-
-<div class="Subhead">
-  <div class="Subhead-heading">
-    <div class="h1 mt-3 mb-1"></div>
-  </div>
-  <div class="Subhead-description">
-    
-
-    
-  </div>
-</div>
+<header>
+<h1 align="center" style="font-size:2em;line-height:1.3em;">Text-to-speech system for low resource languages using cross-lingual transfer learning and data augmentation
+</h1>
+</header>
 <article>
   
-  <section class="pb-6 mb-3 border-bottom">
+<section class="pb-6 mb-3 border-bottom">
     
 
 <h2 id="abstract">Abstract</h2>
 
-<p>We propose ....</p>
+<p>Deep learning techniques are now being applied in text-to-speech (TTS) systems, resulting in significant improvements in performance. These methods require large amounts of text-speech pair data however, and the task of collecting this training data is costly. In this paper, we propose a single-speaker, TTS system for languages with very limited amounts of text-speech pair data. We used (1) cross-lingual transfer learning, (2) data augmentation and (3) a combination of the previous two methods to train the spectrogram prediction models of our TTS systems. Only about 30 minutes of target text-speech pair data was used to train the spec-trogram prediction models and generate augmented data using the Sox tool. We also compared single-speaker and multiple-speaker training methods, using sequential and simultaneous training, respectively. We evaluat-ed the performance of our models using a mean opinion score (MOS) test and found that using both cross-lingual transfer learning and augmented data during training resulted in the most natural synthesized target speech output. Besides, the speaker similarity MOS of this model is very close to the baseline. We also found that it is possible to obtain a model with the same performance as the baseline when using two hours of the original target dataset. We observed that multi-speaker models were effective to use as intermediate models to construct a single-speaker low-resource TTS model. In addition, we trained two Parallel WaveGAN (PWG) neural vocoders, one using our augmented data and one using the entire 12 hours of target language data. Our subjective AB preference test indicated that the neural vocoder trained with augmented data had the same perceived speech quality as the vocoder trained with the entire target language dataset. Our proposed TTS system, consisting of the spectrogram prediction network and PWG neural vocoder, both using a very limited amount of target language training data, could achieve reasonable performance.</p>
 
 <h2 id="generated-examples">Generated samples</h2>
 
