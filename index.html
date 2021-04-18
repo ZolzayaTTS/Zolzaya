@@ -67,13 +67,13 @@ Your browser does not support the audio element.
 </audio>
 </p>
 
-<h3 id="phrase-level-model">2. Single speaker model using TL</h3>
+<h3 id="phrase-level-model">2. Single speaker model using TL (30m)</h3>
 
 <table>
   <tr>
-    <th>JP-10h, MN-30m</th>
-    <th>EN-24h, MN-30m</th>
-    <th>EN-24h, JP-10h, MN-30m</th>
+    <th>M<sub>SJ</sub>-TL</th>
+    <th>M<sub>SE</sub>-TL</th>
+    <th>M<sub>SEJ</sub>-TL</th>
   </tr>
   <tr>
     <td><audio controls="controls" >
@@ -121,13 +121,13 @@ Your browser does not support the audio element.
 </table>
 
 
-<h3 id="phrase-level-model">3. Multi-speaker model using TL</h3>
+<h3 id="phrase-level-model">3. Multi-speaker model using TL (30m)</h3>
 
 <table>
   <tr>
-    <th>JP-10h, MN-30m</th>
-    <th>EN-24h, MN-30m</th>
-    <th>EN-24h, JP-10h, MN-30m</th>
+    <th>M<sub>MJ</sub>-TL</th>
+    <th>M<sub>ME</sub>-TL</th>
+    <th>M<sub>MEJ</sub>-TL</th>
   </tr>
   <tr>
     <td><audio controls="controls" >
@@ -174,11 +174,11 @@ Your browser does not support the audio element.
   
 </table>
 
-<h3 id="phrase-level-model">4. Multi-speaker model using DA</h3>
+<h3 id="phrase-level-model">4. Multi-speaker model using DA (30m)</h3>
 
 <table>
   <tr>
-    <th>MN-30, DA-DA-13h</th>
+    <th>M<sub>M</sub>-DA</th>
   </tr>
   <tr>
     <td><audio controls="controls" >
@@ -202,12 +202,12 @@ Your browser does not support the audio element.
 </table>
 
 
-<h3 id="phrase-level-model">5. Single speaker model using TL and DA</h3>
+<h3 id="phrase-level-model">5. Single speaker model using TL and DA (30m)</h3>
 
 <table>
   <tr>
-    <th>EN-24h, JP-10h, DA-13h, MN-30m</th>
-	<th>EN-24h, JP-10h, DA-30m*13, DA-30m*7, DA-30m*6, MN-30m</th>
+    <th>M<sub>SEJ</sub>-TL-DA</th>
+    <th>M<sub>SEJ</sub>-TL-DA<sub>D</sub></th>
   </tr>
   <tr>
     <td><audio controls="controls" >
@@ -243,11 +243,11 @@ Your browser does not support the audio element.
 </table>
 
 
-<h3 id="phrase-level-model">6. Multi-speaker model using TL and DA</h3>
+<h3 id="phrase-level-model">6. Multi-speaker model using TL and DA (30m)</h3>
 <table>
   <tr>
-    <th>EN-24h, JP-10h, DA-30m*26, MN-30m</th>
-	<th>EN-24h, JP-10h, DA-30m*13, DA-30m*7, DA-30m*6, MN-30m</th>
+    <th>M<sub>MEJ</sub>-TL-DA</th>
+    <th>M<sub>MEJ</sub>-TL-DA<sub>D</sub></th>
   </tr>
   <tr>
     <td><audio controls="controls" >
@@ -282,13 +282,13 @@ Your browser does not support the audio element.
   </tr>
 </table>
 
-<h3 id="phrase-level-model">7. Multi-speaker model using TL and DA</h3>
+<h3 id="phrase-level-model">7. Multi-speaker model using TL and DA (30m, 1h, 2h, 3h)</h3>
 <table>
   <tr>
-    <th>EN-24h, JP-10h, DA-30m*26, MN-30m</th>
-	<th>EN-24h, JP-10h, DA-1h*26, MN-1h</th>
-	<th>EN-24h, JP-10h, DA-2h*26, MN-2h</th>
-	<th>EN-24h, JP-10h, DA-3h*26, MN-3h</th>
+    <th>M<sub>MEJ</sub>-TL-DA(30m)</th>
+	<th>M<sub>MEJ</sub>-TL-DA(1h)</th>
+	<th>M<sub>MEJ</sub>-TL-DA(2h)</th>
+	<th>M<sub>MEJ</sub>-TL-DA(3h)</th>
     <th>Baseline</th>
     
   </tr>
@@ -362,12 +362,12 @@ Your browser does not support the audio element.
 </table>
 
 
-<h3 id="phrase-level-model">8. Voice similarity</h3>
+<h3 id="phrase-level-model">8. Speaker similarity</h3>
 <table>
   <tr>
     <th>GT</th>
     <th>Baseline</th>
-    <th>EN-24h, JP-10h, DA-30m*26, MN-30m</th>
+    <th>M<sub>MEJ</sub>-TL-DA(30m)</th>
   </tr>
   <tr>
     <td><audio controls="controls" >
@@ -417,8 +417,8 @@ Your browser does not support the audio element.
 <h3 id="phrase-level-model">9. Parallel WaveGan neural vocoder</h3>
 <table>
   <tr>
-    <th>VC with the original data</th>
-	<th>VC with the augmented data</th>
+    <th>NV-MN</th>
+	<th>NV-DA(30m)</th>
   </tr>
   <tr>
     <td><audio controls="controls" >
