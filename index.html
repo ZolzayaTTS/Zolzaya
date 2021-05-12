@@ -16,22 +16,22 @@
 
 <h2 id="abstract">Abstract</h2>
 
-<p>Deep learning techniques are now being applied in text-to-speech (TTS) systems, resulting in significant improvements in performance. 
-	These methods require large amounts of text-speech pair data however, and the task of collecting this training data is costly. 
-	In this paper, we propose a single-speaker, TTS system for languages with very limited amounts of text-speech pair data. 
-	We used (1) cross-lingual transfer learning, (2) data augmentation and (3) a combination of the previous two methods to train 
-	the spectrogram prediction models of our TTS systems. Only about 30 minutes of target text-speech pair data was used to train 
-	the spec-trogram prediction models and generate augmented data using the Sox tool. We also compared single-speaker and 
-	multiple-speaker training methods, using sequential and simultaneous training, respectively. We evaluat-ed the performance of 
-	our models using a mean opinion score (MOS) test and found that using both cross-lingual transfer learning and augmented data 
-	during training resulted in the most natural synthesized target speech output. Besides, the speaker similarity MOS of this model 
-	is very close to the baseline. We also found that it is possible to obtain a model with the same performance as the baseline when 
-	using two hours of the original target dataset. We observed that multi-speaker models were effective to use as intermediate models 
-	to construct a single-speaker low-resource TTS model. In addition, we trained two Parallel WaveGAN (PWG) neural vocoders, one using 
-	our augmented data and one using the entire 12 hours of target language data. Our subjective AB preference test indicated that the 
-	neural vocoder trained with augmented data had the same perceived speech quality as the vocoder trained with the entire target language 
-	dataset. Our proposed TTS system, consisting of the spectrogram prediction network and PWG neural vocoder, both using a very limited 
-	amount of target language training data, could achieve reasonable performance.</p>
+<p>Deep learning techniques are currently being applied in automated text-to-speech (TTS) systems, resulting in significant improvements in performance. 
+	These methods require large amounts of text-speech pair data for model training however, and collecting this data is costly. Therefore, in this 
+	paper we propose a single-speaker TTS system for languages with very limited amounts of text-speech pair data. We first evaluate three approaches 
+	for training the spectrogram prediction models of our TTS system; (1) cross-lingual transfer learning, (2) data augmentation and (3) a combination 
+	of the previous two methods. Only 30 minutes of target language data was used to train the spectrogram prediction models and generate the augmented data.
+	We also compare single-speaker and multi-speaker training methods, using sequential and simultaneous training, respectively. We evaluated the 
+	performance of our proposed models using a mean opinion score (MOS) test and found that using both cross-lingual transfer learning and augmented 
+	data during training resulted in the most natural synthesized target speech output. We also observed that multi-speaker models were effective as 
+	intermediate models when constructing a single-speaker, low-resource TTS model. In addition, we trained two Parallel WaveGAN (PWG) neural vocoders, 
+	one using our augmented data and one using the entire 12 hours of target language data. Our subjective AB preference test indicated that the neural 
+	vocoder trained with augmented data achieved almost the same perceived speech quality as the vocoder trained with the entire target language dataset. 
+	We found that the proposed TTS system, consisting of a spectrogram prediction network and PWG neural vocoder, was able to achieve reasonable performance 
+	using only a very limited amount of target language training data. We also investigated whether it would be possible to obtain the same performance as 
+	the baseline model, which was trained with 12 hours of target language data, by using more of the original target language dataset for training the 
+	model and for generating augmented data. By using 2 hours of target language data instead of 30 minutes, our proposed TTS model was able to achieve 
+	performance equivalent to that of the baseline model.</p>
 
 <h2 id="generated-examples">Generated samples</h2>
 
@@ -60,7 +60,7 @@
 </tr>
 </table>
 	  
-<h3 id="model-single-TL">2. Single speaker model using TL (30m)</h3>
+<h3 id="model-single-TL">2. Single-speaker model using TL (30m)</h3>
 
 <table>
   <tr>
@@ -170,7 +170,7 @@
 </table>
 
 
-<h3 id="model-single-TL-DA">5. Single speaker model using TL and DA (30m)</h3>
+<h3 id="model-single-TL-DA">5. Single-speaker model using TL and DA (30m)</h3>
 
 <table>
   <tr>
