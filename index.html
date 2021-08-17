@@ -16,22 +16,28 @@
 
 <h2 id="abstract">Abstract</h2>
 
-<p>Deep learning techniques are currently being applied in automated text-to-speech (TTS) systems, resulting in significant improvements in performance. 
-	These methods require large amounts of text-speech pair data for model training however, and collecting this data is costly. Therefore, in this 
-	paper we propose a single-speaker TTS system for languages with very limited amounts of text-speech pair data. We first evaluate three approaches 
-	for training the spectrogram prediction models of our TTS system; (1) cross-lingual transfer learning, (2) data augmentation and (3) a combination 
-	of the previous two methods. Only 30 minutes of target language data was used to train the spectrogram prediction models and generate the augmented data.
-	We also compare single-speaker and multi-speaker training methods, using sequential and simultaneous training, respectively. We evaluated the 
-	performance of our proposed models using a mean opinion score (MOS) test and found that using both cross-lingual transfer learning and augmented 
-	data during training resulted in the most natural synthesized target speech output. We also observed that multi-speaker models were effective as 
-	intermediate models when constructing a single-speaker, low-resource TTS model. In addition, we trained two Parallel WaveGAN (PWG) neural vocoders, 
-	one using our augmented data and one using the entire 12 hours of target language data. Our subjective AB preference test indicated that the neural 
-	vocoder trained with augmented data achieved almost the same perceived speech quality as the vocoder trained with the entire target language dataset. 
-	We found that the proposed TTS system, consisting of a spectrogram prediction network and PWG neural vocoder, was able to achieve reasonable performance 
-	using only a very limited amount of target language training data. We also investigated whether it would be possible to obtain the same performance as 
-	the baseline model, which was trained with 12 hours of target language data, by using more of the original target language dataset for training the 
-	model and for generating augmented data. By using 2 hours of target language data instead of 30 minutes, our proposed TTS model was able to achieve 
-	performance equivalent to that of the baseline model.</p>
+<p>Deep learning techniques are currently being applied in automated text-to-speech (TTS) systems, 
+	resulting in significant improvements in performance. However, these methods require large amounts 
+	of text-speech paired data for model training, and collecting this data is costly. Therefore, in 
+	this paper we propose a single-speaker TTS system containing both a spectrogram prediction network 
+	and a neural vocoder for the target language, using only 30 minutes of target language text-speech 
+	paired data for training. We evaluate three approaches for training the spectrogram prediction 
+	models of our TTS system, which produce mel-spectrograms from the input phoneme sequence; 
+	(1) cross-lingual transfer learning, (2) data augmentation, and (3) a combination of the previous two methods. 
+	In the cross-lingual transfer learning method, we used two high-resource language datasets, English (24 hours) 
+	and Japanese (10 hours). We also used 30 minutes of target language data for training in all three approaches, 
+	and for generating the augmented data used for training in methods 2 and 3. We found that using both cross-lingual 
+	transfer learning and augmented data during training resulted in the most natural synthesized target speech output. 
+	We also compare single-speaker and multi-speaker training methods, using sequential and simultaneous training, respectively. 
+	The multi-speaker models were found to be more effective for constructing a single-speaker, low-resource TTS model. 
+	In addition, we trained two Parallel WaveGAN (PWG) neural vocoders, one using 13 hours of our augmented data with 
+	30 minutes of target language data and one using the entire 12 hours of the original target language dataset. 
+	Our subjective AB preference test indicated that the neural vocoder trained with augmented data achieved almost 
+	the same perceived speech quality as the vocoder trained with the entire target language dataset. We found that our 
+	proposed TTS system consisting of a spectrogram prediction network and a PWG neural vocoder was able to achieve 
+	reasonable performance using only 30 minutes of target language training data. We also found that by using 3 hours 
+	of target language data, for training the model and for generating augmented data, our proposed TTS model was able 
+	to achieve performance very similar to that of the baseline model, which was trained with 12 hours of target language data.</p>
 
 <h2 id="generated-examples">Generated samples</h2>
 
@@ -64,8 +70,9 @@
 
 <table>
   <tr>
-    <th>M<sub>SJ</sub>-TL</th>
-    <th>M<sub>SE</sub>-TL</th>
+    <th>M<sub>SJ</sub>-TL</th> 
+    <th>M<sub>SE10</sub>-TL</th>
+    <th>M<sub>SE24</sub>-TL</th>
     <th>M<sub>SEJ</sub>-TL</th>
   </tr>
   <tr>
@@ -75,6 +82,7 @@
   </tr>
   <tr>
     <td><audio controls="controls" ><source src="Samples/2/S1-1_JP.wav" autoplay/></audio></td>
+    <td><audio controls="controls" ><source src="Samples/2/S1-2_EN10.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/2/S1-2_EN.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/2/S1-3_EN_JP.wav" autoplay/></audio></td>
   </tr>
@@ -85,6 +93,7 @@
   </tr>
   <tr>
     <td><audio controls="controls" ><source src="Samples/2/S8-1_JP.wav" autoplay/></audio></td>
+    <td><audio controls="controls" ><source src="Samples/2/S8-2_EN10.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/2/S8-2_EN.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/2/S8-3_EN_JP.wav" autoplay/></audio></td>
   </tr>
@@ -95,6 +104,7 @@
   </tr>
    <tr>
     <td><audio controls="controls" ><source src="Samples/2/S24-1_JP.wav" autoplay/></audio></td>
+    <td><audio controls="controls" ><source src="Samples/2/S24-2_EN10.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/2/S24-2_EN.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/2/S24-3_EN_JP.wav" autoplay/></audio></td>
   </tr>
@@ -106,7 +116,8 @@
 <table>
   <tr>
     <th>M<sub>MJ</sub>-TL</th>
-    <th>M<sub>ME</sub>-TL</th>
+    <th>M<sub>ME10</sub>-TL</th>	  
+    <th>M<sub>ME24</sub>-TL</th>
     <th>M<sub>MEJ</sub>-TL</th>
   </tr>
  <tr>
@@ -116,6 +127,7 @@
   </tr>
   <tr>
     <td><audio controls="controls" ><source src="Samples/3/S1-1_JP.wav" autoplay/></audio></td>
+    <td><audio controls="controls" ><source src="Samples/3/S1-2_EN10.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/3/S1-2_EN.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/3/S1-3_EN_JP.wav" autoplay/></audio></td>
   </tr>
@@ -126,7 +138,8 @@
   </tr>
   <tr>
     <td><audio controls="controls" ><source src="Samples/3/S8-1_JP.wav" autoplay/></audio></td>
-    <td><audio controls="controls" ><source src="Samples/3/S8-2_JP.wav" autoplay/></audio></td>
+    <td><audio controls="controls" ><source src="Samples/3/S8-2_EN10.wav" autoplay/></audio></td>
+    <td><audio controls="controls" ><source src="Samples/3/S8-2_EN.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/3/S8-3_EN_JP.wav" autoplay/></audio></td>
   </tr>
   <tr>
@@ -136,6 +149,7 @@
   </tr>
    <tr>
     <td><audio controls="controls" ><source src="Samples/3/S24-1_JP.wav" autoplay/></audio></td>
+    <td><audio controls="controls" ><source src="Samples/3/S24-2_EN10.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/3/S24-2_EN.wav" autoplay/></audio></td>
     <td><audio controls="controls" ><source src="Samples/3/S24-3_EN_JP.wav" autoplay/></audio></td>
   </tr>
